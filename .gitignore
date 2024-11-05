@@ -1,1 +1,7 @@
-/.modules
+node_modules/*
+node_modules
+.DS_Store 
+cypress.env.json 
+.env 
+dist/
+cypress/videos/*

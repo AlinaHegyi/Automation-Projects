@@ -210,7 +210,7 @@ cy.get('.checkbox > input').should('be.enabled')
   });
 
 
-  it.only('Test Case 10 - Validate the form submission', () => {
+  it('Test Case 10 - Validate the form submission', () => {
 
     // cy.get('.control [placeholder="Enter your full name"]').type('Alina Hegyi');
     // cy.get('input[type="radio"][name="question"]').eq(1).check();

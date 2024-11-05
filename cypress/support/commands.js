@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+
+Cypress.Commands.add('checkOptionAndValidateOthers', (optionToCheck, expectedTexts) => {
+    cy.contains(optionToCheck).find('input').check().should('be.checked')
+    expectedTexts.filter(option => option !== optionToCheck).forEach(uncheckedOption => {
+      cy.contains(uncheckedOption).find('input').should('not.be.checked')
+    })
+  })
+
+
+
+
+
+
+
